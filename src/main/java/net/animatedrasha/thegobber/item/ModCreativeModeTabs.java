@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CROOKED_FANG.get()))
                     .title(Component.translatable("creativetab.the_gobber_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.CRYSTASLICER.get());
                         pOutput.accept(ModItems.CROOKED_FANG.get());
                         pOutput.accept(ModItems.LAZULI_STEEL.get());
                         pOutput.accept(ModBlocks.LAZULI_STEEL_BLOCK.get());

@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.animatedrasha.thegobber.item.custom.CrystaslicerItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -15,6 +16,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CROOKED_FANG = ITEMS.register("crooked_fang",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRYSTASLICER = ITEMS.register("crystaslicer",
+            () -> new CrystaslicerItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -2,6 +2,7 @@ package net.animatedrasha.thegobber;
 
 import com.mojang.logging.LogUtils;
 import net.animatedrasha.thegobber.block.ModBlocks;
+import net.animatedrasha.thegobber.effect.ModEffects;
 import net.animatedrasha.thegobber.item.ModCreativeModeTabs;
 import net.animatedrasha.thegobber.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,8 @@ public class TheGobber
         IEventBus modEventBus = context.getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         ModItems.register(modEventBus);
 
