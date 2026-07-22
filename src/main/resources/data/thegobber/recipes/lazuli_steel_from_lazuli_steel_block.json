@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "thegobber:lazuli_steel_block"
+    }
+  ],
+  "result": {
+    "item": "thegobber:lazuli_steel",
+    "count": 9
+  }
+}

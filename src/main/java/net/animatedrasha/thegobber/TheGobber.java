@@ -1,6 +1,10 @@
 package net.animatedrasha.thegobber;
 
 import com.mojang.logging.LogUtils;
+import net.animatedrasha.thegobber.block.ModBlocks;
+import net.animatedrasha.thegobber.item.ModCreativeModeTabs;
+import net.animatedrasha.thegobber.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +30,12 @@ public class TheGobber
     public TheGobber(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

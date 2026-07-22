@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "item": "thegobber:lazuli_steel"
+    }
+  },
+  "result": {
+    "item": "thegobber:lazuli_steel_block"
+  }
+}
