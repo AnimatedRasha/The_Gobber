@@ -15,7 +15,7 @@ public class ModToolTiers {
             1561,                   // Durability
             8.0F,                   // Mining Speed
             3.5F,                   // Base Attack Damage
-            18,                     // Enchantability
+            12,                     // Enchantability
             BlockTags.NEEDS_DIAMOND_TOOL,
             () -> Ingredient.of(Tags.Items.GEMS_DIAMOND)
     );
