@@ -29,11 +29,11 @@ public class TheGobber
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public TheGobber(FMLJavaModLoadingContext context)
+    public TheGobber()
     {
         GeckoLib.initialize();
 
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModEntities.register(modEventBus);
 
