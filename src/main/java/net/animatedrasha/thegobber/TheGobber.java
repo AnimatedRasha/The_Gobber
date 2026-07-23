@@ -5,7 +5,7 @@ import net.animatedrasha.thegobber.block.ModBlocks;
 import net.animatedrasha.thegobber.effect.ModEffects;
 import net.animatedrasha.thegobber.item.ModCreativeModeTabs;
 import net.animatedrasha.thegobber.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.animatedrasha.thegobber.entity.ModEntities;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TheGobber.MOD_ID)
@@ -30,7 +31,11 @@ public class TheGobber
 
     public TheGobber(FMLJavaModLoadingContext context)
     {
+        GeckoLib.initialize();
+
         IEventBus modEventBus = context.getModEventBus();
+
+        ModEntities.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 
@@ -49,8 +54,7 @@ public class TheGobber
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        net.minecraftforge.fml.ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -77,4 +81,5 @@ public class TheGobber
 
         }
     }
+
 }

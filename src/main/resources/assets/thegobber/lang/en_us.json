@@ -1,4 +1,9 @@
 {
+
+  "entity.thegobber.gobber": "Gobber",
+
+  "item.thegobber.gobber_spawn_egg": "Gobber Spawn Egg",
+
   "creativetab.the_gobber_tab": "The Gobber",
 
   "effect.thegobber.splintered": "Splintered",
