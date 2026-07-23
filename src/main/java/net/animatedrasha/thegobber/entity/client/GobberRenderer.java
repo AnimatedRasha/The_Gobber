@@ -9,6 +9,6 @@ public class GobberRenderer extends GeoEntityRenderer<GobberEntity> {
     public GobberRenderer(EntityRendererProvider.Context context) {
         super(context, new GobberModel());
 
-        this.shadowRadius = 0.45F;
+        this.shadowRadius = 1.25F;
     }
 }

@@ -17,7 +17,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<GobberEntity>> GOBBER =
             ENTITY_TYPES.register("gobber",
                     () -> EntityType.Builder.of(GobberEntity::new, MobCategory.MONSTER)
-                            .sized(0.8F, 1.2F)
+                            .sized(2.5F, 2F)
                             .build("gobber"));
 
     public static void register(IEventBus eventBus) {

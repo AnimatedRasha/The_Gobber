@@ -18,8 +18,8 @@ public class ModItems {
             ITEMS.register("gobber_spawn_egg",
                     () -> new ForgeSpawnEggItem(
                             ModEntities.GOBBER,
-                            0x6A4E42,   // primary color
-                            0xB98B62,   // spots
+                            0x3a3d2d,   // primary color
+                            0xbd7aff,   // spots
                             new Item.Properties()));
     public static final RegistryObject<Item> LAZULI_STEEL = ITEMS.register("lazuli_steel",
             () -> new Item(new Item.Properties()));
